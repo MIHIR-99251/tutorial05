@@ -56,7 +56,7 @@ router.patch('/movies/:id',async (req,res)=>{
 //delete api
 router.delete('/movies/:id', async (req, res) => {   // delete by id
     const _id = req.params.id;
-    const deleteItem = await Menu.findByIdAndDelete(_id);
+    const deleteItem = await Movie.findByIdAndDelete(_id);
     res.send(deleteItem);
 })
 
